@@ -1,0 +1,4 @@
+plugin/_pack.vim
+pack/*
+!pack/.gitkeep
+.cache
