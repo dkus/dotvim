@@ -1,5 +1,5 @@
 let g:ale_linters = {
-            \'rust': ['rls', 'cargo'],
+            \'rust': ['rustc', 'rls', 'cargo'],
             \'go': ['gopls'],
             \'python': ['pyls', 'pylint'],
             \'java': ['checkstyle', 'javac']}
