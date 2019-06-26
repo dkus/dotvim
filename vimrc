@@ -48,6 +48,9 @@ set showmatch
 let mapleader=','
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+noremap <leader><Tab> :bnext<CR>
+noremap <leader><S-Tab> :bprevious<CR>
+noremap <leader>q :bd<CR>
 
 " groups
 augroup commitmsg
@@ -56,7 +59,7 @@ augroup commitmsg
 augroup END
 
 " swap and backup
-func! EnsureExists(path)
+func! s:EnsureExists(path)
   if !isdirectory(expand(a:path))
     call mkdir(expand(a:path))
   endif
@@ -70,10 +73,10 @@ if exists('+undofile')
   set undofile
   set undodir=~/.vim/.cache/undo
 endif
-call EnsureExists('~/.vim/.cache')
-call EnsureExists(&undodir)
-call EnsureExists(&backupdir)
-call EnsureExists(&directory)
+call s:EnsureExists('~/.vim/.cache')
+call s:EnsureExists(&undodir)
+call s:EnsureExists(&backupdir)
+call s:EnsureExists(&directory)
 
 " gui
 if has('gui_running')
