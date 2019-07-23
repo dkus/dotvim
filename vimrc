@@ -77,12 +77,3 @@ call s:EnsureExists('~/.vim/.cache')
 call s:EnsureExists(&undodir)
 call s:EnsureExists(&backupdir)
 call s:EnsureExists(&directory)
-
-" gui
-if has('gui_running')
-  if has("gui_gtk2") || has('gui_gtk3')
-    set guifont=Hack\ Regular\ 13
-  else
-    set guifont=Hack_Regular:h13:cDEFAULT
-  endif
-endif
