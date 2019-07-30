@@ -26,6 +26,11 @@
 - 
   category: default
   local: false
+  name: "dense-analysis/ale"
+  opt: false
+- 
+  category: default
+  local: false
   name: "dhruvasagar/vim-table-mode"
   opt: false
 - 
@@ -82,9 +87,4 @@
   category: default
   local: false
   name: "vim-airline/vim-airline-themes"
-  opt: false
-- 
-  category: default
-  local: false
-  name: w0rp/ale
   opt: false
