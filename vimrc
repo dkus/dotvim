@@ -3,15 +3,20 @@ filetype plugin indent on
 syntax enable
 set nocompatible
 set path+=**
+set shortmess+=c
 set encoding=UTF-8
 set wildmenu
+set cmdheight=2
 set hlsearch incsearch ignorecase smartcase
 set termguicolors
 set history=1000
 set timeoutlen=300
 set ttimeoutlen=50
-set updatetime=1000
+set updatetime=400
 set background=light
+set nobackup
+set nowritebackup
+set noswapfile
 colorscheme PaperColor
 
 " cursor
@@ -41,8 +46,12 @@ set list
 set cursorline
 set scrolloff=1
 set scrolljump=5
-set signcolumn=yes
 set showmatch
+if has("patch-8.1.1564")
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
 
 " mappings
 let mapleader=','
@@ -57,23 +66,3 @@ augroup commitmsg
     autocmd!
     autocmd BufRead COMMIT_EDITMSG setlocal spell spelllang=en_us
 augroup END
-
-" swap and backup
-func! s:EnsureExists(path)
-  if !isdirectory(expand(a:path))
-    call mkdir(expand(a:path))
-  endif
-endfunc
-
-set backup
-set backupdir=~/.vim/.cache/backup
-set directory=~/.vim/.cache/swap
-set noswapfile
-if exists('+undofile')
-  set undofile
-  set undodir=~/.vim/.cache/undo
-endif
-call s:EnsureExists('~/.vim/.cache')
-call s:EnsureExists(&undodir)
-call s:EnsureExists(&backupdir)
-call s:EnsureExists(&directory)

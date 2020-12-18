@@ -11,22 +11,7 @@
 - 
   category: default
   local: false
-  name: "Shougo/neosnippet-snippets"
-  opt: false
-- 
-  category: default
-  local: false
-  name: Shougo/neosnippet.vim
-  opt: false
-- 
-  category: default
-  local: false
   name: "airblade/vim-gitgutter"
-  opt: false
-- 
-  category: default
-  local: false
-  name: "dense-analysis/ale"
   opt: false
 - 
   category: default
@@ -59,9 +44,30 @@
   name: majutsushi/tagbar
   opt: false
 - 
+  build: git checkout release
   category: default
   local: false
-  name: "maralla/completor-neosnippet"
+  name: neoclide/coc.nvim
+  opt: false
+- 
+  category: default
+  local: false
+  name: "psliwka/vim-smoothie"
+  opt: false
+- 
+  category: default
+  local: false
+  name: "ryanoasis/vim-devicons"
+  opt: false
+- 
+  category: default
+  local: false
+  name: scrooloose/nerdtree
+  opt: false
+- 
+  category: default
+  local: false
+  name: "tpope/vim-abolish"
   opt: false
 - 
   category: default
@@ -76,10 +82,20 @@
 - 
   category: default
   local: false
+  name: "unblevable/quick-scope"
+  opt: false
+- 
+  category: default
+  local: false
   name: "vim-airline/vim-airline"
   opt: false
 - 
   category: default
   local: false
   name: "vim-airline/vim-airline-themes"
+  opt: false
+- 
+  category: default
+  local: false
+  name: "vim-scripts/SQLUtilities"
   opt: false
