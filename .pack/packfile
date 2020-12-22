@@ -52,17 +52,17 @@
 - 
   category: default
   local: false
+  name: preservim/nerdtree
+  opt: false
+- 
+  category: default
+  local: false
   name: "psliwka/vim-smoothie"
   opt: false
 - 
   category: default
   local: false
   name: "ryanoasis/vim-devicons"
-  opt: false
-- 
-  category: default
-  local: false
-  name: scrooloose/nerdtree
   opt: false
 - 
   category: default
