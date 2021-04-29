@@ -19,7 +19,9 @@ log "Installing pack plugin for vim into ~/.local/bin/pack"
 v=v0.2.5
 os=x86_64-unknown-linux-gnu
 wget -q https://github.com/maralla/pack/releases/download/$v/pack-$v-$os.tar.gz -O $p/pack-$v.tar.gz
-tar -vxf pack-$v-$os.tar.gz
+(cd $p && tar -vxf pack-$v-$os.tar.gz)
+log "Cleaning pack installation..."
+(ls | grep -v pack | xargs rm)
 
 case :$PATH: in
   *:$p:*)  ;;  # do nothing
