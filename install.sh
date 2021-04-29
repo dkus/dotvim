@@ -14,7 +14,7 @@ then
 fi
 
 b=$HOME/.local/bin
-p="$p/packdir"
+p="$b/packdir"
 log "Installing pack plugin for vim into ~/.local/bin/packdir"
 mkdir -p $p
 
