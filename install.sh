@@ -13,20 +13,23 @@ then
     mv $HOME/{.vim,.vim.$ts}
 fi
 
-p="$HOME/.local/bin/packdir"
+b=$HOME/.local/bin
+p="$p/packdir"
 log "Installing pack plugin for vim into ~/.local/bin/packdir"
-(mkdir -p $p && cd $p)
+mkdir -p $p
+
 v=v0.2.5
 os=x86_64-unknown-linux-gnu
 wget -q https://github.com/maralla/pack/releases/download/$v/pack-$v-$os.tar.gz -O $p/pack-$v.tar.gz
-(cd $p && tar -vxf pack-$v-$os.tar.gz)
+
+tar -xvf $p/pack-$v-$os.tar.gz -C $p
 log "Cleaning pack installation..."
-(ls | grep -v "^pack$" | xargs rm -rf)
-(chmod u+x pack && cd.. && mv $p/pack . && rm -rf $p)
+(ls $p | grep -v "^pack$" | xargs rm -rf)
+(chmod u+x $p/pack && mv $p/pack $b && rm -rf $p)
 log "Done installing pack"
 
 log "Cloning dkus/dotvim..."
 git clone https://github.com/dkus/dotvim.git $HOME/.vim
 log "Install vim packs..."
-(cd $HOME/.vim && pack install)
+($HOME/.local/bin/pack install)
 log "Done"
