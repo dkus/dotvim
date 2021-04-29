@@ -16,7 +16,7 @@ fi
 p="$HOME/.local/bin/pack"
 log "Installing pack plugin for vim into ~/.local/bin/pack"
 (mkdir -p $p && cd $p)
-v=v0.1.0
+v=v0.2.5
 os=x86_64-unknown-linux-gnu
 wget -q https://github.com/maralla/pack/releases/download/$v/pack-$v-$os.tar.gz -O $p/pack-$v.tar.gz
 tar -vxf pack-$v-$os.tar.gz
