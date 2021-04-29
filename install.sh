@@ -22,7 +22,7 @@ v=v0.2.5
 os=x86_64-unknown-linux-gnu
 wget -q https://github.com/maralla/pack/releases/download/$v/pack-$v-$os.tar.gz -O $p/pack-$v.tar.gz
 
-tar -xvf $p/pack-$v-$os.tar.gz -C $p
+tar -xvf $p/pack-$v.tar.gz -C $p
 log "Cleaning pack installation..."
 (ls $p | grep -v "^pack$" | xargs rm -rf)
 (chmod u+x $p/pack && mv $p/pack $b && rm -rf $p)
