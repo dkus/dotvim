@@ -1,4 +1,4 @@
-let g:coc_global_extensions = ['coc-json', 'coc-java', 'coc-snippets', 'coc-sql', 'coc-sh']
+let g:coc_global_extensions = ['coc-json', 'coc-java', 'coc-snippets', 'coc-sql', 'coc-sh', 'coc-reveal']
 
 let g:airline#extensions#coc#enabled = 1
 command! -nargs=0 Prettier :CocCommand prettier.formatFile

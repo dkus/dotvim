@@ -24,12 +24,17 @@
   name: edkolev/tmuxline.vim
   opt: false
 - 
+  build: "cd app && yarn install"
+  category: default
+  local: false
+  name: "iamcco/markdown-preview.nvim"
+  opt: false
+- 
   category: default
   local: false
   name: "jiangmiao/auto-pairs"
   opt: false
--
-  build: ./install
+- 
   category: default
   local: false
   name: junegunn/fzf
