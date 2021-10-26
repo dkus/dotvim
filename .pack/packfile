@@ -16,6 +16,11 @@
 - 
   category: default
   local: false
+  name: "dhruvasagar/vim-dotoo"
+  opt: false
+- 
+  category: default
+  local: false
   name: "dhruvasagar/vim-table-mode"
   opt: false
 - 
