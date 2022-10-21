@@ -45,6 +45,7 @@
   name: "jiangmiao/auto-pairs"
   opt: false
 - 
+  build: ./install
   category: default
   local: false
   name: junegunn/fzf
