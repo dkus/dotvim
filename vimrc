@@ -13,26 +13,20 @@ set history=1000
 set timeoutlen=300
 set ttimeoutlen=50
 set updatetime=400
-set background=light
+set background=dark
 set nobackup
 set nowritebackup
 set noswapfile
 colorscheme PaperColor
 
-" cursor
-if exists('$TMUX')
-    let &t_SI = "\ePtmux;\e\e[5 q\e\\"
-    let &t_SR = "\ePtmux;\e\e[4 q\e\\"
-    let &t_EI = "\ePtmux;\e\e[2 q\e\\"
-else
-    let &t_SI = "\<Esc>[5 q"
-    let &t_SR = "\<Esc>[4 q"
-    let &t_EI = "\<Esc>[2 q"
-endif
+" cursor shapes
+let &t_SI = "\<Esc>[5 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
 
 " windows, buffers
 set number relativenumber
-set listchars=tab:→\ ,trail:·,eol:¬
+set listchars=tab:→\ ,trail:·,eol:¬,nbsp:☠
 set hidden
 set lazyredraw
 set backspace=indent,eol,start
@@ -65,4 +59,13 @@ noremap <leader>q :bd<CR>
 augroup commitmsg
     autocmd!
     autocmd BufRead COMMIT_EDITMSG setlocal spell spelllang=en_us
+augroup END
+
+" for sh files, 2 spaces
+autocmd Filetype sh setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
+" reset the cursor on start due to zsh bindkey -M vicmd v edit-command-line
+augroup ResetCursorShape
+au!
+ autocmd VimEnter * normal! :startinsert :stopinsert
 augroup END

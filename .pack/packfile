@@ -26,6 +26,11 @@
 - 
   category: default
   local: false
+  name: "editorconfig/editorconfig-vim"
+  opt: false
+- 
+  category: default
+  local: false
   name: edkolev/tmuxline.vim
   opt: false
 - 
