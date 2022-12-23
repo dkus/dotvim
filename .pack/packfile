@@ -16,6 +16,11 @@
 - 
   category: default
   local: false
+  name: chrisbra/csv.vim
+  opt: false
+- 
+  category: default
+  local: false
   name: "dhruvasagar/vim-dotoo"
   opt: false
 - 
